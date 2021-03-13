@@ -37,11 +37,6 @@ public class ConcreteSubject implements Subject {
         observers.remove(observer);
     }
 
-    @Override
-    public void notifyObservers(String message) {
-        notifyObserversSuccess(message);
-        notifyObserversFail(message);
-    }
 
 //    //    同步阻塞
 //    @Override
@@ -70,12 +65,6 @@ public class ConcreteSubject implements Subject {
         }
     }
 
-    @Override
-    public void notifyObserversFail(String message) {
-        for (Observer observer : observers) {
-            observer.fail(message);
-        }
-    }
 
     @Override
     public void registerAllObserver(List<Observer> observers) {

@@ -29,7 +29,6 @@ public class ObserberDemo {
         subject.registerObserver(new ConcreteObserverTwo());
 
         subject.notifyObserversSuccess("成功了");
-        subject.notifyObserversFail("失败了");
     }
 
     private static void test2() {
@@ -39,8 +38,8 @@ public class ObserberDemo {
         observers.add(new ConcreteObserverOne());
         observers.add(new ConcreteObserverTwo());
         subject.registerAllObserver(observers);
+
         subject.notifyObserversSuccess("成功了");
-        subject.notifyObserversFail("失败了");
 
     }
 }

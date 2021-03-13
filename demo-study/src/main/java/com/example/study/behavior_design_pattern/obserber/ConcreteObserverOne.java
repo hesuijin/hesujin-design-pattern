@@ -9,12 +9,6 @@ package com.example.study.behavior_design_pattern.obserber;
 public class ConcreteObserverOne implements Observer{
 
     @Override
-    public void fail(String message) {
-        //可以根据 发布者的消息 执行自己的逻辑
-        System.out.println("ConcreteObserverOne is notified." + message);
-    }
-
-    @Override
     public void success(String message) {
         //可以根据 发布者的消息 执行自己的逻辑
         System.out.println("ConcreteObserverOne is success." + message);
