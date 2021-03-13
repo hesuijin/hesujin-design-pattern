@@ -26,7 +26,7 @@ public class ObserberDemo {
         subject.registerObserver(new ConcreteObserverOne());
         subject.registerObserver(new ConcreteObserverTwo());
 
-        subject.notifyObserversFail("成功了");
+        subject.notifyObserversSuccess("成功了");
     }
 
     private static void test2() {
