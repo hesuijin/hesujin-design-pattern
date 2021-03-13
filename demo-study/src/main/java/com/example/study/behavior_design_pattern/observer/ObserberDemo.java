@@ -1,10 +1,8 @@
-package com.example.study.behavior_design_pattern.obserber;
+package com.example.study.behavior_design_pattern.observer;
 
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executor;
-import java.util.concurrent.ThreadPoolExecutor;
 
 public class ObserberDemo {
 

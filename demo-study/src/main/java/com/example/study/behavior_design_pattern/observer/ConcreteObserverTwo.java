@@ -1,4 +1,4 @@
-package com.example.study.behavior_design_pattern.obserber;
+package com.example.study.behavior_design_pattern.observer;
 
 /**
  * 创建   订阅者 二

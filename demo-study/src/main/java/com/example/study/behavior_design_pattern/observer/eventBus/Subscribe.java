@@ -1,4 +1,4 @@
-package com.example.study.behavior_design_pattern.obserber.eventBus;
+package com.example.study.behavior_design_pattern.observer.eventBus;
 
 import com.google.common.annotations.Beta;
 

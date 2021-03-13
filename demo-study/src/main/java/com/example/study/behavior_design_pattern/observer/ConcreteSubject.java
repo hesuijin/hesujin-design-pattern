@@ -1,6 +1,6 @@
-package com.example.study.behavior_design_pattern.obserber;
+package com.example.study.behavior_design_pattern.observer;
 
-import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,10 +17,11 @@ public class ConcreteSubject implements Subject {
 
     //TODO 优化线程池参数
     //创建线程池
-    private static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(4, 4, 0L, TimeUnit.MILLISECONDS,
-            new LinkedBlockingQueue<>(1024));
+    private static  ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(4, 4, 0L,
+            TimeUnit.MILLISECONDS, new LinkedBlockingQueue<>(1024));
 
     private List<Observer> observers = new ArrayList();
+
 
     /**
      * 注册单个订阅者

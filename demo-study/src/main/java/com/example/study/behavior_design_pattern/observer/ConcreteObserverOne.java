@@ -1,4 +1,10 @@
-package com.example.study.behavior_design_pattern.obserber;
+package com.example.study.behavior_design_pattern.observer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 创建   订阅者 一
