@@ -1,6 +1,7 @@
 package com.example.study.behavior_design_pattern.obserber;
 
 
+import java.util.List;
 
 /**
  * @Author HeSuiJin
@@ -10,5 +11,15 @@ package com.example.study.behavior_design_pattern.obserber;
 public interface Subject {
     void registerObserver(Observer observer);
     void removeObserver(Observer observer);
-    void notifyObservers(String message);
+
+    /**
+     * 全部方法执行一遍
+     * @param messsage
+     */
+    void notifyObservers(String messsage);
+
+    void notifyObserversFail(String message);
+    void notifyObserversSuccess(String message);
+
+    void registerAllObserver(List<Observer> observers);
 }

@@ -13,6 +13,10 @@ public class ConcreteSubject implements Subject {
 
     private List<Observer> observers = new ArrayList();
 
+    /**
+     * 注册单个订阅者
+     * @param observer
+     */
     @Override
     public void registerObserver(Observer observer) {
         observers.add(observer);
@@ -23,11 +27,29 @@ public class ConcreteSubject implements Subject {
         observers.remove(observer);
     }
 
-
     @Override
     public void notifyObservers(String message) {
+        notifyObserversSuccess(message);
+        notifyObserversFail(message);
+    }
+
+    @Override
+    public void notifyObserversSuccess(String message) {
         for (Observer observer : observers) {
-            observer.update(message);
+            observer.success(message);
         }
     }
+
+    @Override
+    public void notifyObserversFail(String message) {
+        for (Observer observer : observers) {
+            observer.fail(message);
+        }
+    }
+
+    @Override
+    public void registerAllObserver(List<Observer> observers) {
+        this.observers = observers;
+    }
+
 }

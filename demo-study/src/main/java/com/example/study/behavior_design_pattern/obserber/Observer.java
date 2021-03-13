@@ -7,5 +7,7 @@ package com.example.study.behavior_design_pattern.obserber;
  * @Description:
  */
 public interface Observer {
-    void update(String message);
+    void fail(String message);
+
+    void success(String message);
 }
