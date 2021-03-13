@@ -13,7 +13,6 @@ public class ObserberDemo {
 //        先创建observe再add
 //        test2();
 
-
     }
 
     private static void test1() {
