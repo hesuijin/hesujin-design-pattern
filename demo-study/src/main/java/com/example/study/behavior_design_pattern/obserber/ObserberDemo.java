@@ -3,12 +3,14 @@ package com.example.study.behavior_design_pattern.obserber;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class ObserberDemo {
 
     public static void main(String[] args) {
 //        subject中直接add
-//        test1();
+        test1();
 
 //        先创建observe再add
 //        test2();
@@ -27,6 +29,7 @@ public class ObserberDemo {
         subject.registerObserver(new ConcreteObserverTwo());
 
         subject.notifyObserversSuccess("成功了");
+        subject.notifyObserversFail("失败了");
     }
 
     private static void test2() {
@@ -36,7 +39,7 @@ public class ObserberDemo {
         observers.add(new ConcreteObserverOne());
         observers.add(new ConcreteObserverTwo());
         subject.registerAllObserver(observers);
-
+        subject.notifyObserversSuccess("成功了");
         subject.notifyObserversFail("失败了");
 
     }

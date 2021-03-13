@@ -1,10 +1,10 @@
 package com.example.study.behavior_design_pattern.obserber;
 
-import lombok.NoArgsConstructor;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.*;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 创建发布者  发布者可以  注册/移除 订阅者   可以给所有的订阅者发信息
@@ -13,12 +13,8 @@ import java.util.concurrent.*;
  * @Date 2021/3/13 13:32
  * @Description:
  */
-public class ConcreteSubject implements Subject {
+public class ConcreteSubjectEventBus implements Subject {
 
-    //TODO 优化线程池参数
-    //创建线程池
-    private static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(4, 4, 0L, TimeUnit.MILLISECONDS,
-            new LinkedBlockingQueue<>(1024));
 
     private List<Observer> observers = new ArrayList();
 
@@ -43,32 +39,14 @@ public class ConcreteSubject implements Subject {
         notifyObserversFail(message);
     }
 
-//    //    同步阻塞
-//    @Override
-//    public void notifyObserversSuccess(String message) {
-//        for (Observer observer : observers) {
-//            observer.success(message);
-//        }
-//    }
-//
-//    //    异步非阻塞 新增线程
-//    @Override
-//    public void notifyObserversSuccess(String message) {
-//        for (Observer observer : observers) {
-//            Thread thread = new Thread(() -> {
-//                observer.success(message);
-//            });
-//            thread.start();
-//        }
-//    }
-
-    //    异步非阻塞 新增线程池
+    //    同步阻塞
     @Override
     public void notifyObserversSuccess(String message) {
         for (Observer observer : observers) {
-            threadPoolExecutor.execute(() -> observer.success(message));
+            observer.success(message);
         }
     }
+
 
     @Override
     public void notifyObserversFail(String message) {
