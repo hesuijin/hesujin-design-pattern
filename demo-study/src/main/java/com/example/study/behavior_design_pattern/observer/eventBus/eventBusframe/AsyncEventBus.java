@@ -1,4 +1,4 @@
-package com.example.study.behavior_design_pattern.observer.eventBus;
+package com.example.study.behavior_design_pattern.observer.eventBus.eventBusframe;
 
 import java.util.concurrent.Executor;
 

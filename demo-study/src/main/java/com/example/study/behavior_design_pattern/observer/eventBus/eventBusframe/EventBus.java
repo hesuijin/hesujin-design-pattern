@@ -1,10 +1,10 @@
-package com.example.study.behavior_design_pattern.observer.eventBus;
+package com.example.study.behavior_design_pattern.observer.eventBus.eventBusframe;
 
+import com.example.study.behavior_design_pattern.observer.generalObserver.Observer;
 import com.google.common.util.concurrent.MoreExecutors;
 
 import java.util.List;
 import java.util.concurrent.Executor;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * EventBus 实现的是阻塞同步的观察者模式
@@ -25,7 +25,7 @@ public class EventBus {
     public EventBus() {
         this(MoreExecutors.directExecutor());
     }
-
+    //与AsyncEventBus的构造方法代码复用
     protected EventBus(Executor executor) {
         this.executor = executor;
     }
@@ -35,6 +35,13 @@ public class EventBus {
      */
     public void register(Object object) {
         registry.register(object);
+    }
+
+    /**
+     * @param objects
+     */
+    public void registerAllObserver(List<Object> objects) {
+        objects.forEach(object -> registry.register(object));
     }
 
     public void post(Object event) {

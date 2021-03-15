@@ -1,10 +1,10 @@
-package com.example.study.behavior_design_pattern.observer;
+package com.example.study.behavior_design_pattern.observer.generalObserver;
 
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ObserberDemo {
+public class ObserverDemo {
 
     public static void main(String[] args) {
 //        subject中直接add
@@ -16,7 +16,7 @@ public class ObserberDemo {
     }
 
     private static void test1() {
-//        1：设置 发布者订阅者   模块方法  Observer Subject
+//        1：设置 发布者订阅者   模块方法  Observer SubjectEventBus
 //        2：创建 发布者订阅者   实现类  ConcreteSubject  ConcreteObserver
 //        3：订阅者 注册到发布者上 表示监听发布者
 //        4：给发布者发送消息  然后监听该发布者的所有订阅者 都能收到

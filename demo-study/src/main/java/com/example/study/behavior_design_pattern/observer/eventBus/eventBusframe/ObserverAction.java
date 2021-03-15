@@ -1,12 +1,10 @@
-package com.example.study.behavior_design_pattern.observer.eventBus;
+package com.example.study.behavior_design_pattern.observer.eventBus.eventBusframe;
 
 import com.google.common.base.Preconditions;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * ObserverAction 类用来表示 @Subscribe 注解的方法，其中，
@@ -18,9 +16,6 @@ import java.util.concurrent.ThreadPoolExecutor;
  */
 @Slf4j
 public class ObserverAction {
-
-    @Autowired
-    private ThreadPoolExecutor threadPoolExecutor;
 
     private Object target;
     private Method method;
@@ -40,6 +35,5 @@ public class ObserverAction {
         } catch (InvocationTargetException | IllegalAccessException e) {
             log.info("ObserverAction execute异常"+e.getMessage(),e);
         }
-        threadPoolExecutor.execute(()->{System.out.println("faf");});
     }
 }

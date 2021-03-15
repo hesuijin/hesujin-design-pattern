@@ -1,4 +1,4 @@
-package com.example.study.behavior_design_pattern.observer;
+package com.example.study.behavior_design_pattern.observer.generalObserver;
 
 
 import java.util.List;

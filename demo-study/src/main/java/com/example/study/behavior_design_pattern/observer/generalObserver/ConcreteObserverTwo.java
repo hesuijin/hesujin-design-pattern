@@ -1,4 +1,4 @@
-package com.example.study.behavior_design_pattern.observer;
+package com.example.study.behavior_design_pattern.observer.generalObserver;
 
 /**
  * 创建   订阅者 二
@@ -9,10 +9,9 @@ package com.example.study.behavior_design_pattern.observer;
  */
 public class ConcreteObserverTwo implements Observer {
 
-
     @Override
     public void success(String message) {
         //可以根据 发布者的消息 执行自己的逻辑
-        System.out.println("ConcreteObserverTwo is success." + message);
+        System.out.println("ConcreteObserverEventBusTwo is success." + message);
     }
 }

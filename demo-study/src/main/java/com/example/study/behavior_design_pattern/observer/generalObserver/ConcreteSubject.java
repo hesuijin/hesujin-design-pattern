@@ -1,6 +1,4 @@
-package com.example.study.behavior_design_pattern.observer;
-
-import org.springframework.beans.factory.annotation.Autowired;
+package com.example.study.behavior_design_pattern.observer.generalObserver;
 
 import java.util.ArrayList;
 import java.util.List;
