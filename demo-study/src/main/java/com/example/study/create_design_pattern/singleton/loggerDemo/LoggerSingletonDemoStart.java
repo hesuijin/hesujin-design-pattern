@@ -10,7 +10,11 @@ import java.io.IOException;
 public class LoggerSingletonDemoStart {
 
     public static void main(String[] args) throws IOException {
+        new LoggerSingleton();
+
+
         //这样就只能获取该单例的Logger对象
-        LoggerSingleton.getInstance().log("我是测试单例的Logger啊");
+//        LoggerSingleton.getInstance().log("我是测试单例的Logger啊");
+//        LoggerSingleton.getInstance().log("我是测试单例的Logger啊");
     }
 }

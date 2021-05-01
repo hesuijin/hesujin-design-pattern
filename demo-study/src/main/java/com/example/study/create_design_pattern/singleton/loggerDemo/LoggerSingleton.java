@@ -14,7 +14,8 @@ import java.io.IOException;
 @Slf4j
 public class LoggerSingleton {
 
-    private static final LoggerSingleton instance = new LoggerSingleton();
+    //静态常量在类加载时初始化
+    private static final   LoggerSingleton instance = new LoggerSingleton();
     public static LoggerSingleton getInstance() { return instance; }
 
     private FileWriter writer;
