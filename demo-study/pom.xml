@@ -20,6 +20,7 @@
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
+<!--        googel的事件订阅发布模型-->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
