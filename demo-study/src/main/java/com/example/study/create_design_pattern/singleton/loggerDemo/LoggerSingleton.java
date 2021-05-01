@@ -14,7 +14,8 @@ import java.io.IOException;
 @Slf4j
 public class LoggerSingleton {
 
-    //静态常量在类加载时初始化
+    //static 静态变量                    在类加载时初始化
+    //final  变量变常量  只能被赋值一次  在类加载时初始化
     private static final   LoggerSingleton instance = new LoggerSingleton();
     public static LoggerSingleton getInstance() { return instance; }
 
