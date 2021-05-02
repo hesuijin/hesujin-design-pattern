@@ -11,6 +11,6 @@ public class ConcreteObserverOne implements Observer{
     @Override
     public void success(String message) {
         //可以根据 发布者的消息 执行自己的逻辑
-        System.out.println("ConcreteObserverEventBusOne is success." + message);
+        System.out.println("ConcreteObserverOne is success." + message);
     }
 }
