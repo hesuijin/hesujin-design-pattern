@@ -1,8 +1,8 @@
 package com.example.study.create_design_pattern.factory.simpleFactory;
 
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.IRuleConfigParser;
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.PropertiesRuleConfigParser;
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.YamlRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.IRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.PropertiesRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.YamlRuleConfigParser;
 
 /**
  * @Description:
@@ -11,12 +11,13 @@ import com.example.study.create_design_pattern.factory.simpleFactory.parser.Yaml
  */
 public class RuleConfigSource {
 
-    public String load(String ruleConfigFilePath) {
+    public String load(String ruleConfigFilePath) throws Exception {
 
         //获取文件后缀名称
         String ruleConfigFileExtension = getFileExtension(ruleConfigFilePath);
 
         IRuleConfigParser parser = null;
+
         //根据文件 后缀名称获取相应的配置
         if ("yaml".equalsIgnoreCase(ruleConfigFileExtension)) {
             parser = new YamlRuleConfigParser();
@@ -27,7 +28,7 @@ public class RuleConfigSource {
         }
 
         //使用对应对象的方法
-        String ruleConfig = parser.parse();
+        String ruleConfig = parser.parser();
         return ruleConfig;
     }
 

@@ -1,8 +1,8 @@
 package com.example.study.create_design_pattern.factory.simpleFactory;
 
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.IRuleConfigParser;
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.PropertiesRuleConfigParser;
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.YamlRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.IRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.PropertiesRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.YamlRuleConfigParser;
 
 /**
  * @Description:

@@ -1,8 +1,8 @@
 package com.example.study.create_design_pattern.factory.simpleFactory;
 
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.IRuleConfigParser;
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.PropertiesRuleConfigParser;
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.YamlRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.IRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.PropertiesRuleConfigParser;
+import com.example.study.create_design_pattern.factory.simpleFactory.configParser.YamlRuleConfigParser;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,9 +31,5 @@ public class RuleConfigSourceCreateParserFactoryTwo {
         //根据文件 后缀名称获取相应的配置
         IRuleConfigParser parser = cachedParsers.get(ruleConfigFileExtension);
         return parser;
-    }
-
-    public static void main(String[] args) {
-        cachedParsers.get(null);
     }
 }

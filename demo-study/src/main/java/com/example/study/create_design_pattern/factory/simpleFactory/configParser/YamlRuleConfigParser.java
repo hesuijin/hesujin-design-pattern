@@ -1,6 +1,4 @@
-package com.example.study.create_design_pattern.factory.simpleFactory.parser;
-
-import com.example.study.create_design_pattern.factory.simpleFactory.parser.IRuleConfigParser;
+package com.example.study.create_design_pattern.factory.simpleFactory.configParser;
 
 /**
  * @Description:

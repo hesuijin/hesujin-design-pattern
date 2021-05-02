@@ -1,4 +1,4 @@
-package com.example.study.create_design_pattern.factory.simpleFactory.parser;
+package com.example.study.create_design_pattern.factory.simpleFactory.configParser;
 
 /**
  * @Description:
