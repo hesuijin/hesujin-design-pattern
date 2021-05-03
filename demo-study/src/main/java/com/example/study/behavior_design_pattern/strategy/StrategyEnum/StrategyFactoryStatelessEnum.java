@@ -30,7 +30,6 @@ public class StrategyFactoryStatelessEnum {
         }
         //使用JSONObject进行深拷贝
         Strategy strategy = JSONObject.parseObject(JSONObject.toJSONString(strategies.get(type)), Strategy.class);
-
         return strategy;
     }
 }
