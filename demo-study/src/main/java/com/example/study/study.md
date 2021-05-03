@@ -1,4 +1,4 @@
-#### Observer
+####  创建注解类
 
 #####  1:@Retention(RetentionPolicy.RUNTIME)
     1:RetentionPolicy.SOURCE：注解只保留在源文件，当Java文件编译成class文件的时候，注解被遗弃；
