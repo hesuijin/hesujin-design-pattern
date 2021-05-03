@@ -3,14 +3,14 @@
 
 ##### 三大类设计模式介绍
     创建型模式（build_design_pattern）     是将创建和使用代码解耦    
-    结构型模式（structure_design_pattern） 是将不同功能代码解耦
-    行为型模式（behavior_design_pattern） 是将不同的行为代码解耦
+    结构型模式（structure_design_pattern） 是将不同大功能的代码解耦
+    行为型模式（behavior_design_pattern）  是将不同小行为的代码解耦
 
 #### 文章阅读流程：   
     目录：
     如何写好代码
-    1：创建型 单例模式           
-    2：创建型 工厂模式   
+    1：创建型  单例模式           
+    2：创建型  工厂模式   
     3：结构型  代理模式
     4：结构型  装饰器模式
     5：行为型  模板模式
